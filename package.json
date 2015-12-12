@@ -1,7 +1,6 @@
 {
   "name": "test-feature",
   "version": "0.0.1",
-  "main": "app/app.js",
   "description": "Small description for test-feature goes here",
   "private": true,
   "directories": {
