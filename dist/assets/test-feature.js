@@ -187,7 +187,7 @@ catch(err) {
 if (runningTests) {
   require("test-feature/tests/test-helper");
 } else {
-  require("test-feature/app")["default"].create({"name":"test-feature","version":"0.0.1+4b7e2835"});
+  require("test-feature/app")["default"].create({"name":"test-feature","version":"0.0.1+2bca64c3"});
 }
 
 /* jshint ignore:end */

@@ -7,6 +7,8 @@ module.exports = function(defaults) {
     tests: false
   });
 
+  app.import('bower_components/ember/ember.prod.js');
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
