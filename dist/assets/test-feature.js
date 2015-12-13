@@ -166,28 +166,11 @@ define('test-feature/templates/application', ['exports'], function (exports) {
 /* jshint ignore:start */
 
 define('test-feature/config/environment', ['ember'], function(Ember) {
-  var prefix = 'test-feature';
-/* jshint ignore:start */
-
-try {
-  var metaName = prefix + '/config/environment';
-  var rawConfig = Ember['default'].$('meta[name="' + metaName + '"]').attr('content');
-  var config = JSON.parse(unescape(rawConfig));
-
-  return { 'default': config };
-}
-catch(err) {
-  throw new Error('Could not read config from meta tag with name "' + metaName + '".');
-}
-
-/* jshint ignore:end */
-
+  return { 'default': {"modulePrefix":"test-feature","environment":"development","baseURL":"/","locationType":"auto","EmberENV":{"FEATURES":{}},"APP":{"name":"test-feature","version":"0.0.1+2bfe0d9a"},"contentSecurityPolicyHeader":"Content-Security-Policy-Report-Only","contentSecurityPolicy":{"default-src":"'none'","script-src":"'self' 'unsafe-eval'","font-src":"'self'","connect-src":"'self'","img-src":"'self'","style-src":"'self'","media-src":"'self'"},"exportApplicationGlobal":true}};
 });
 
 if (runningTests) {
   require("test-feature/tests/test-helper");
-} else {
-  require("test-feature/app")["default"].create({"name":"test-feature","version":"0.0.1+2bca64c3"});
 }
 
 /* jshint ignore:end */
