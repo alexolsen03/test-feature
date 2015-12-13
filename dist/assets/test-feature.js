@@ -159,100 +159,6 @@ define('test-feature/templates/application', ['exports'], function (exports) {
   }()));
 
 });
-define('test-feature/tests/app.jshint', function () {
-
-  'use strict';
-
-  module('JSHint - .');
-  test('app.js should pass jshint', function() { 
-    ok(true, 'app.js should pass jshint.'); 
-  });
-
-});
-define('test-feature/tests/helpers/resolver', ['exports', 'ember/resolver', 'test-feature/config/environment'], function (exports, Resolver, config) {
-
-  'use strict';
-
-  var resolver = Resolver['default'].create();
-
-  resolver.namespace = {
-    modulePrefix: config['default'].modulePrefix,
-    podModulePrefix: config['default'].podModulePrefix
-  };
-
-  exports['default'] = resolver;
-
-});
-define('test-feature/tests/helpers/resolver.jshint', function () {
-
-  'use strict';
-
-  module('JSHint - helpers');
-  test('helpers/resolver.js should pass jshint', function() { 
-    ok(true, 'helpers/resolver.js should pass jshint.'); 
-  });
-
-});
-define('test-feature/tests/helpers/start-app', ['exports', 'ember', 'test-feature/app', 'test-feature/config/environment'], function (exports, Ember, Application, config) {
-
-  'use strict';
-
-
-
-  exports['default'] = startApp;
-  function startApp(attrs) {
-    var application;
-
-    var attributes = Ember['default'].merge({}, config['default'].APP);
-    attributes = Ember['default'].merge(attributes, attrs); // use defaults, but you can override;
-
-    Ember['default'].run(function () {
-      application = Application['default'].create(attributes);
-      application.setupForTesting();
-      application.injectTestHelpers();
-    });
-
-    return application;
-  }
-
-});
-define('test-feature/tests/helpers/start-app.jshint', function () {
-
-  'use strict';
-
-  module('JSHint - helpers');
-  test('helpers/start-app.js should pass jshint', function() { 
-    ok(true, 'helpers/start-app.js should pass jshint.'); 
-  });
-
-});
-define('test-feature/tests/router.jshint', function () {
-
-  'use strict';
-
-  module('JSHint - .');
-  test('router.js should pass jshint', function() { 
-    ok(true, 'router.js should pass jshint.'); 
-  });
-
-});
-define('test-feature/tests/test-helper', ['test-feature/tests/helpers/resolver', 'ember-qunit'], function (resolver, ember_qunit) {
-
-	'use strict';
-
-	ember_qunit.setResolver(resolver['default']);
-
-});
-define('test-feature/tests/test-helper.jshint', function () {
-
-  'use strict';
-
-  module('JSHint - .');
-  test('test-helper.js should pass jshint', function() { 
-    ok(true, 'test-helper.js should pass jshint.'); 
-  });
-
-});
 /* jshint ignore:start */
 
 /* jshint ignore:end */
@@ -281,7 +187,7 @@ catch(err) {
 if (runningTests) {
   require("test-feature/tests/test-helper");
 } else {
-  require("test-feature/app")["default"].create({"name":"test-feature","version":"0.0.1+87ae0316"});
+  require("test-feature/app")["default"].create({"name":"test-feature","version":"0.0.1+4b7e2835"});
 }
 
 /* jshint ignore:end */
