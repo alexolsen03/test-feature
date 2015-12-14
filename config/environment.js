@@ -43,5 +43,7 @@ module.exports = function(environment) {
 
   }
 
+  ENV.APP.rootElement = '#test-content';
+
   return ENV;
 };
