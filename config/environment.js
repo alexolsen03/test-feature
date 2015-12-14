@@ -44,6 +44,8 @@ module.exports = function(environment) {
 
   }
 
+      ENV.baseURL = '/';
+    ENV.locationType = 'none';
   ENV.APP.rootElement = '#test-content';
 
   return ENV;
