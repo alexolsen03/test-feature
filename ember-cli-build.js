@@ -5,14 +5,14 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     hinting: false,
     tests: false,
-    autoRun: false,
-    storeConfigInMeta: false
+    autoRun: true,
+    storeConfigInMeta: false,
+    rootElement: '#test-content'
   });
   app.import({
     development: 'bower_components/ember/ember.js',
     production:  'bower_components/ember/ember.prod.js'
   });
-  app.import('bower_components/ember/ember.prod.js');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
